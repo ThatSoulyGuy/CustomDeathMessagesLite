@@ -1,0 +1,8 @@
+
+messages:
+  player-killed-by-player-over-99: "&c☠ &e@%VICTIM% &cwas &e@%KILLER%'s &a#%KILL_COUNT% &7ckill&7!"
+  player-killed-by-player: "&c☠ &e@%VICTIM% &cwas killed by &e@%KILLER%&7!"
+
+  player-killed-by-mob: "&c☠ &e@%VICTIM% &cwas killed by a mob&7!"
+  player-killed-by-fall: "&c☠ &e@%VICTIM% &cmet their end due to a fall&7!"
+  player-killed-by-unknown: "&c☠ &e@%VICTIM% &cwas killed&7!"
