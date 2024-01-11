@@ -1,7 +1,7 @@
 name: CustomDeathMessages
 version: '${project.version}'
 main: com.thatsoulyguy.customdeathmessages.CustomDeathMessages
-api-version: '1.20'
+api-version: '1.20, 1.17.1, 1.17'
 
 depend: [PlaceholderAPI]
 

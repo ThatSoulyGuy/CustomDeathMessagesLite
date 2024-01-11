@@ -56,7 +56,7 @@ public final class CustomDeathMessages extends JavaPlugin
 
         Objects.requireNonNull(Bukkit.getWorld("world")).setGameRule(GameRule.SHOW_DEATH_MESSAGES, false);
 
-        Objects.requireNonNull(getCommand("cmdreload")).setExecutor(new ReloadCommand());
+        Objects.requireNonNull(getCommand("cdmreload")).setExecutor(new ReloadCommand());
         getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
 
         defaultConfig.Initialize("config.yml");
