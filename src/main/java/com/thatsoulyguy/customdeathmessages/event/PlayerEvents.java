@@ -59,7 +59,7 @@ public class PlayerEvents implements Listener
 
         for (String word : words)
         {
-            if (word.startsWith("@"))
+            if (word.startsWith((String)CustomDeathMessages.Instance.defaultConfig.GetValue("playerReferencePrefix")))
             {
                 String playerName = word.substring(1);
                 Player mentionedPlayer = Bukkit.getPlayerExact(playerName);
@@ -69,6 +69,18 @@ public class PlayerEvents implements Listener
                     mentionedPlayer.playSound(mentionedPlayer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 1.0f);
 
                     message = message.replace(word, "§e" + word + "§r");
+                    foundPlayer = true;
+                }
+            }
+            else if(((String)CustomDeathMessages.Instance.defaultConfig.GetValue("requiresPrefix")).contains("false"))
+            {
+                Player mentionedPlayer = Bukkit.getPlayerExact(word);
+
+                if (mentionedPlayer != null && mentionedPlayer.isOnline())
+                {
+                    mentionedPlayer.playSound(mentionedPlayer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 1.0f);
+
+                    message = message.replace(word, "§e" + CustomDeathMessages.Instance.defaultConfig.GetValue("playerReferencePrefix") + word + "§r");
                     foundPlayer = true;
                 }
             }

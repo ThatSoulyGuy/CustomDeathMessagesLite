@@ -1,4 +1,7 @@
 
+requiresPrefix: "false"
+playerReferencePrefix: "@"
+
 messages:
   player-killed-by-player-over-99: "&c☠ &e@%VICTIM% &cwas &e@%KILLER%'s &a#%KILL_COUNT% &7ckill&7!"
   player-killed-by-player: "&c☠ &e@%VICTIM% &cwas killed by &e@%KILLER%&7!"
